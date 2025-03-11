@@ -1,0 +1,152 @@
+body {
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+.container {
+    max-width: 95%;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+h1, h2 {
+    color: #333;
+}
+.section {
+    margin-bottom: 30px;
+}
+.filters {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.filter-btn {
+    padding: 6px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.filter-btn.active {
+    background-color: #4e79a7;
+    color: white;
+    border-color: #4e79a7;
+    box-shadow: 0 2px 5px rgba(78,121,167,0.3);
+}
+.filter-btn:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.filter-btn.active:hover {
+    background-color: #3d6a96;
+}
+
+/* 在不同篩選時使用對應的顏色 */
+.filter-btn[data-filter="公司"].active {
+    background-color: #4e79a7;
+    border-color: #4e79a7;
+}
+.filter-btn[data-filter="IP資產"].active {
+    background-color: #f28e2c; 
+    border-color: #f28e2c;
+}
+.filter-btn[data-filter="事件"].active {
+    background-color: #e15759;
+    border-color: #e15759;
+}
+.filter-btn[data-filter="策略"].active {
+    background-color: #76b7b2;
+    border-color: #76b7b2;
+}
+.filter-btn[data-filter="市場趨勢"].active {
+    background-color: #59a14f;
+    border-color: #59a14f;
+}
+.filter-btn[data-filter="技術"].active {
+    background-color: #af7aa1;
+    border-color: #af7aa1;
+}
+.filter-btn[data-filter="競爭"].active {
+    background-color: #e15759;
+    border-color: #e15759;
+}
+.reset-btn {
+    padding: 5px 15px;
+    border: 1px solid #e15759;
+    border-radius: 15px;
+    background-color: #e15759;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+    margin-left: 10px;
+}
+.reset-btn:hover {
+    background-color: #c04142;
+    border-color: #c04142;
+}
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 15px 0;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    pointer-events: none;
+    opacity: 0;
+    font-size: 14px;
+    max-width: 300px;
+    z-index: 100;
+}
+#graph {
+    width: 100%;
+    height: 70vh; /* 使用螢幕高度70%，確保跟畫面大小對應 */
+    min-height: 500px; /* 確保最小高度 */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fafafa; /* 稍低調背景色降低視覺負擔 */
+    overflow: hidden;
+    position: relative; /* 加入相對定位定位子元素 */
+}
+#timeline {
+    width: 100%;
+    height: 200px; /* 增加時間軸高度以容納更多文字行，從150px改為200px */
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+.summary-box {
+    background-color: #f5f7fa;
+    border-left: 3px solid #4e79a7;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}

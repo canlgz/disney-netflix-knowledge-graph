@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney與Netflix兩大IP演進脈絡</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Disney與Netflix兩大IP演進脈絡</h1>
+        
+        <div class="summary-box">
+            本脈絡呈現Disney與Netflix兩大娛樂巨頭的發展歷程、競爭關係和產業影響。包含兩家公司的重要收購、IP資產、策略轉型、技術應用以及對串流媒體產業的塑造。透過互動式視覺化，揭示這兩家公司如何重塑全球娛樂產業格局。
+        </div>
+        
+        <div class="section">
+            <h2>不同演變支節：</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="公司">公司</button>
+                <button class="filter-btn" data-filter="IP資產">IP資產</button>
+                <button class="filter-btn" data-filter="事件">事件</button>
+                <button class="filter-btn" data-filter="策略">策略</button>
+                <button class="filter-btn" data-filter="市場趨勢">市場趨勢</button>
+                <button class="filter-btn" data-filter="技術">技術</button>
+                <button class="filter-btn" data-filter="競爭">競爭關係</button>
+                <button class="reset-btn" id="reset-graph">重置圖表</button>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #4e79a7;"></div>
+                    <span>公司</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f28e2c;"></div>
+                    <span>IP資產</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #e15759;"></div>
+                    <span>事件</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #76b7b2;"></div>
+                    <span>策略</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #59a14f;"></div>
+                    <span>市場趨勢</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #af7aa1;"></div>
+                    <span>技術</span>
+                </div>
+            </div>
+            
+            <div id="graph"></div>
+        </div>
+        
+        <div class="section">
+            <h2>時間線</h2>
+            <svg id="timeline" width="1000" height="250"></svg>
+        </div>
+    </div>
+
+    <!-- 引入外部JS檔案 - 注意載入順序 -->
+    <script src="disney-netflix-nodes.js"></script>
+    <script src="disney-netflix-edges.js"></script>
+    <script src="disney-netflix-data.js"></script>
+    <script src="knowledge-graph.js"></script>
+</body>
+</html>
